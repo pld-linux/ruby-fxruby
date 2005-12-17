@@ -1,0 +1,11 @@
+--- FXRuby-1.4.3/ext/fox14/extconf.rb~	2005-11-06 23:59:28.000000000 +0100
++++ FXRuby-1.4.3/ext/fox14/extconf.rb	2005-12-16 22:28:56.610567520 +0100
+@@ -131,7 +131,7 @@
+   find_library("GL", "glXCreateContext", "/usr/X11R6/lib")
+   find_library("GLU", "gluNewQuadric", "/usr/X11R6/lib")
+   $libs = append_library($libs, "FOX-1.4")
+-  $CFLAGS = $CFLAGS + " -O0 -Iinclude"
++  $CFLAGS = $CFLAGS + " -Iinclude"
+   if is_fxscintilla_build?
+     File.move('scintilla_wrap.cpp.bak', 'scintilla_wrap.cpp') if FileTest.exists?('scintilla_wrap.cpp.bak')
+     $CFLAGS = $CFLAGS + " -DWITH_FXSCINTILLA"
