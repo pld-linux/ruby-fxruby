@@ -6,6 +6,7 @@
 %define		__ruby	/usr/bin/ruby
 #
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
+Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
 Version:	1.4.3	
 Release:	0.1
@@ -23,16 +24,26 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 FXRuby - the Ruby language bindings for the FOX GUI toolkit.
 
+%description -l pl
+FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego interfejsu
+u¿ytkownika FOX.
+
 %package apidocs
 Summary:	API documentation for FXRuby
+Summary(pl):	Dokumentacja API biblioteki FXRuby
 Group:		Documentation
 
 %description apidocs
 API documentation for FXRuby - the Ruby language bindings for the FOX
 GUI toolkit.
 
+%description apidocs -l pl
+Dokumentacja API biblioteki FXRuby - wi±zañ jêzyka Ruby do toolkitu
+graficznego interfejsu u¿ytkownika FOX.
+
 %package examples 
-Summary:	API documentation for FXRuby
+Summary:	Examples for FXRuby
+Summary(pl):	Przyk³ady do biblioteki FXRuby
 #TODO: new group Development/Languages/Ruby
 Group:		Development/Languages
 
@@ -40,17 +51,30 @@ Group:		Development/Languages
 Example programs for FXRuby - the Ruby language bindings for the FOX
 GUI toolkit.
 
+%description examples -l pl
+Przyk³ady do biblioteki FXRuby - wi±zañ jêzyka Ruby do toolkitu
+graficznego interfejsu u¿ytkownika FOX.
+
+
 %prep
 %setup -q -n %{_pnam}-%{version}
 %patch0 -p1
 
 %build
-CC="%{__cc}" CXX="%{__cxx}" CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcxxflags}" %{__ruby} install.rb config
-CC="%{__cc}" CXX="%{__cxx}" CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcxxflags}" %{__ruby} install.rb setup
+CC="%{__cc}" \
+CXX="%{__cxx}" \
+CFLAGS="%{rpmcflags}" \
+CXXFLAGS="%{rpmcxxflags}" \
+%{__ruby} install.rb config
+
+CC="%{__cc}" \
+CXX="%{__cxx}" \
+CFLAGS="%{rpmcflags}" \
+CXXFLAGS="%{rpmcxxflags}" \
+%{__ruby} install.rb setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__ruby} install.rb install --prefix=$RPM_BUILD_ROOT
