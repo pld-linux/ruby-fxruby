@@ -17,8 +17,9 @@ Source0:	http://rubyforge.lauschmusik.de/fxruby/%{_pnam}-%{version}.tar.gz
 Patch0:		%{name}-CFLAGS.patch
 URL:		http://rubyforge.org/projects/fxruby/
 BuildRequires:	fox >= 1.4
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
