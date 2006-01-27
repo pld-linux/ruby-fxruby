@@ -8,12 +8,12 @@
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
 Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
-Version:	1.4.3	
-Release:	0.2
+Version:	1.4.4	
+Release:	0.1
 License:	LGPL	
 Group:		X11/Libraries		
 Source0:	http://rubyforge.lauschmusik.de/fxruby/%{_pnam}-%{version}.tar.gz
-# Source0-md5:	54598609033449180963aa38a28dd2ff
+# Source0-md5:	e92f1e24b04802a532b1ad9de18e5306
 Patch0:		%{name}-CFLAGS.patch
 URL:		http://rubyforge.org/projects/fxruby/
 BuildRequires:	fox >= 1.4
