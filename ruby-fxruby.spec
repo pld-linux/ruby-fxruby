@@ -1,24 +1,25 @@
 #
+# Conditional build:
 %bcond_without	apidocs # don't generate documentation through rdoc
 #
-%define		_pnam	FXRuby
-# TODO: __ruby  macro should be defined in rpm macros similarly as __perl
 %define		__ruby	/usr/bin/ruby
+%define		_pnam	FXRuby
 #
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
 Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
-Version:	1.4.5
+Version:	1.4.6
 Release:	1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://rubyforge.lauschmusik.de/fxruby/%{_pnam}-%{version}.tar.gz
-# Source0-md5:	f22c3d01c8211662a2de36a332135ac4
+# Source0-md5:	b96db6dac270c3930d50cb1e0544f137
 Patch0:		%{name}-CFLAGS.patch
 URL:		http://www.fxruby.org/
 BuildRequires:	fox >= 1.4
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
+BuildRequires:	fxscintilla-devel
 %{?ruby_mod_ver_requires_eq}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -66,7 +67,11 @@ CC="%{__cc}" \
 CXX="%{__cxx}" \
 CFLAGS="%{rpmcflags}" \
 CXXFLAGS="%{rpmcxxflags}" \
-%{__ruby} install.rb config
+%{__ruby} install.rb config -- \
+	--with-fox-include=/usr/include/fox-1.4 \
+	--with-fox-lib="%{_libdir}" \
+	--with-fxscintilla-include=/usr/include \
+	--with-fxscintilla-lib="%{_libdir}"
 
 CC="%{__cc}" \
 CXX="%{__cxx}" \
