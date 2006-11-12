@@ -8,18 +8,18 @@
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
 Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
-Version:	1.4.6
-Release:	1
+Version:	1.6.3
+Release:	0.1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://rubyforge.lauschmusik.de/fxruby/%{_pnam}-%{version}.tar.gz
-# Source0-md5:	b96db6dac270c3930d50cb1e0544f137
+# Source0-md5:	a724960b1cd0522ef219ed7275bf2cb8
 Patch0:		%{name}-CFLAGS.patch
 URL:		http://www.fxruby.org/
-BuildRequires:	fox >= 1.4
+BuildRequires:	fox >= 1.6
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
-BuildRequires:	fxscintilla-devel
+BuildRequires:	fxscintilla-devel >= 1.71
 %{?ruby_mod_ver_requires_eq}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -68,7 +68,7 @@ CXX="%{__cxx}" \
 CFLAGS="%{rpmcflags}" \
 CXXFLAGS="%{rpmcxxflags}" \
 %{__ruby} install.rb config -- \
-	--with-fox-include=/usr/include/fox-1.4 \
+	--with-fox-include=/usr/include/fox-1.6 \
 	--with-fox-lib="%{_libdir}" \
 	--with-fxscintilla-include=/usr/include \
 	--with-fxscintilla-lib="%{_libdir}"
@@ -94,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%{ruby_sitelibdir}/fox14
+%{ruby_sitelibdir}/fox16
 %attr(755,root,root) %{ruby_sitearchdir}/*.so
 
 %if %{with apidocs}
