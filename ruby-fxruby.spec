@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc README
 %{ruby_sitelibdir}/fox16
 %attr(755,root,root) %{ruby_sitearchdir}/*.so
 
