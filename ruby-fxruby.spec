@@ -1,4 +1,9 @@
 #
+# NOTE:	- sth is broken - every FXRuby application before starting spits out
+#	  a lot of warnings like this one:
+#	  /usr/lib/ruby/site_ruby/1.8/i686-linux/fox16.so: warning: already initialized constant FXStreamDead
+#	  and starting FXRuby applicatins takes significant amount of time
+#
 # Conditional build:
 %bcond_without	apidocs # don't generate documentation through rdoc
 #
