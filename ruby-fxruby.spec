@@ -1,9 +1,3 @@
-#
-# NOTE:	- sth is broken - every FXRuby application before starting spits out
-#	  a lot of warnings like this one:
-#	  /usr/lib/ruby/site_ruby/1.8/i686-linux/fox16.so: warning: already initialized constant FXStreamDead
-#	  and starting FXRuby applicatins takes significant amount of time
-#
 # Conditional build:
 %bcond_without	apidocs # don't generate documentation through rdoc
 #
@@ -13,12 +7,12 @@
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
 Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
-Version:	1.6.3
+Version:	1.6.4
 Release:	0.1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://rubyforge.lauschmusik.de/fxruby/%{_pnam}-%{version}.tar.gz
-# Source0-md5:	a724960b1cd0522ef219ed7275bf2cb8
+# Source0-md5:	42943ccc5b54608c3fe451d46d7ffcf2
 Patch0:		%{name}-CFLAGS.patch
 URL:		http://www.fxruby.org/
 BuildRequires:	fox >= 1.6
