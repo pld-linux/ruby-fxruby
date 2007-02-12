@@ -5,7 +5,7 @@
 %define		_pnam	FXRuby
 #
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
-Summary(pl):	FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego FOX
+Summary(pl.UTF-8):   FXRuby - wiÄ…zania jÄ™zyka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
 Version:	1.6.5
 Release:	1
@@ -25,26 +25,26 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 FXRuby - the Ruby language bindings for the FOX GUI toolkit.
 
-%description -l pl
-FXRuby - wi±zania jêzyka Ruby do toolkitu graficznego interfejsu
-u¿ytkownika FOX.
+%description -l pl.UTF-8
+FXRuby - wiÄ…zania jÄ™zyka Ruby do toolkitu graficznego interfejsu
+uÅ¼ytkownika FOX.
 
 %package apidocs
 Summary:	API documentation for FXRuby
-Summary(pl):	Dokumentacja API biblioteki FXRuby
+Summary(pl.UTF-8):   Dokumentacja API biblioteki FXRuby
 Group:		Documentation
 
 %description apidocs
 API documentation for FXRuby - the Ruby language bindings for the FOX
 GUI toolkit.
 
-%description apidocs -l pl
-Dokumentacja API biblioteki FXRuby - wi±zañ jêzyka Ruby do toolkitu
-graficznego interfejsu u¿ytkownika FOX.
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki FXRuby - wiÄ…zaÅ„ jÄ™zyka Ruby do toolkitu
+graficznego interfejsu uÅ¼ytkownika FOX.
 
 %package examples
 Summary:	Examples for FXRuby
-Summary(pl):	Przyk³ady do biblioteki FXRuby
+Summary(pl.UTF-8):   PrzykÅ‚ady do biblioteki FXRuby
 #TODO: new group Development/Languages/Ruby
 Group:		Development/Languages
 
@@ -52,9 +52,9 @@ Group:		Development/Languages
 Example programs for FXRuby - the Ruby language bindings for the FOX
 GUI toolkit.
 
-%description examples -l pl
-Przyk³ady do biblioteki FXRuby - wi±zañ jêzyka Ruby do toolkitu
-graficznego interfejsu u¿ytkownika FOX.
+%description examples -l pl.UTF-8
+PrzykÅ‚ady do biblioteki FXRuby - wiÄ…zaÅ„ jÄ™zyka Ruby do toolkitu
+graficznego interfejsu uÅ¼ytkownika FOX.
 
 
 %prep
