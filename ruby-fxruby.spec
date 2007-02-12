@@ -5,7 +5,7 @@
 %define		_pnam	FXRuby
 #
 Summary:	FXRuby - the Ruby language bindings for the FOX GUI toolkit
-Summary(pl.UTF-8):   FXRuby - wiązania języka Ruby do toolkitu graficznego FOX
+Summary(pl.UTF-8):	FXRuby - wiązania języka Ruby do toolkitu graficznego FOX
 Name:		ruby-%{_pnam}
 Version:	1.6.5
 Release:	1
@@ -31,7 +31,7 @@ użytkownika FOX.
 
 %package apidocs
 Summary:	API documentation for FXRuby
-Summary(pl.UTF-8):   Dokumentacja API biblioteki FXRuby
+Summary(pl.UTF-8):	Dokumentacja API biblioteki FXRuby
 Group:		Documentation
 
 %description apidocs
@@ -44,7 +44,7 @@ graficznego interfejsu użytkownika FOX.
 
 %package examples
 Summary:	Examples for FXRuby
-Summary(pl.UTF-8):   Przykłady do biblioteki FXRuby
+Summary(pl.UTF-8):	Przykłady do biblioteki FXRuby
 #TODO: new group Development/Languages/Ruby
 Group:		Development/Languages
 
