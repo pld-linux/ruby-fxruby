@@ -1,11 +1,20 @@
---- FXRuby-1.6.3/ext/fox16/extconf.rb~	2006-11-12 22:10:28.000000000 +0100
-+++ FXRuby-1.6.3/ext/fox16/extconf.rb	2006-11-12 22:11:08.000000000 +0100
-@@ -131,7 +131,7 @@
-   find_library("GL", "glXCreateContext", "/usr/X11R6/lib")
+--- FXRuby-1.6.16/ext/fox16/extconf.rb.bef	2008-08-17 12:06:14.000000000 +0200
++++ FXRuby-1.6.16/ext/fox16/extconf.rb	2008-08-17 12:06:58.000000000 +0200
+@@ -138,7 +138,7 @@
    find_library("GLU", "gluNewQuadric", "/usr/X11R6/lib")
    $libs = append_library($libs, "FOX-1.6")
+   $libs = append_library($libs, "Xrandr")
 -  $CFLAGS = $CFLAGS + " -O0 -Iinclude"
 +  $CFLAGS = $CFLAGS + " -Iinclude"
    if is_fxscintilla_build?
-     File.move('scintilla_wrap.cpp.bak', 'scintilla_wrap.cpp') if FileTest.exists?('scintilla_wrap.cpp.bak')
+     File.move('scintilla_wrap.cpp.bak', 'scintilla_wrap.cpp') if FileTest.exist?('scintilla_wrap.cpp.bak')
+     $CFLAGS = $CFLAGS + " -DWITH_FXSCINTILLA -DHAVE_FOX_1_6"
+@@ -164,7 +164,7 @@
+   $libs = append_library($libs, "Xrandr")
+   $libs = append_library($libs, "Xcursor")
+   $libs = append_library($libs, "png")
+-  $CFLAGS = $CFLAGS + " -O0 -Iinclude"
++  $CFLAGS = $CFLAGS + " -Iinclude"
+   if is_fxscintilla_build?
+     File.move('scintilla_wrap.cpp.bak', 'scintilla_wrap.cpp') if FileTest.exist?('scintilla_wrap.cpp.bak')
      $CFLAGS = $CFLAGS + " -DWITH_FXSCINTILLA -DHAVE_FOX_1_6"
